@@ -1,0 +1,103 @@
+.wrapper {
+    margin-left: 6px;
+}
+
+.Search,
+.search-result {
+    width: var(--search-popper-width);
+    width: 300px;
+}
+
+.Search {
+    position: relative;
+    height: var(--search-height);
+    display: flex;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    background-color: #1a1a1a;
+    font-family: var(--font-sans-fallback);
+    color: var(--search-text-color);
+    transition: border-color 0.2s ease-in-out;
+    font-weight: 400;
+
+    input {
+        flex: 1;
+        padding-right: 35px;
+        height: 100%;
+        font-size: 1.6rem;
+        caret-color: var(--primary);
+        background-color: transparent;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+        font-size: 500;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: var(--search-top-spacer);
+        right: var(--search-button-width);
+        width: 1px;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        background-color: var(--search-text-color);
+    }
+
+    &:focus-within {
+        border-color: var(--search-text-color);
+    }
+
+    &:hover {
+        border-color: var(--white);
+        font-size: 500;
+    }
+}
+
+.search-result {
+    padding-top: 13px;
+}
+
+.search-label {
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.search-clear,
+.search-loading,
+.search-btn {
+    background-color: transparent;
+    color: var(--search-text-color);
+    cursor: pointer;
+}
+
+.search-clear,
+.search-loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-loading {
+    animation: spinner 2s linear infinite;
+}
+
+.search-btn {
+    width: var(--search-button-width);
+    height: 100%;
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+    font-size: 1.8rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(12, 14, 25, 0.03);
+    }
+
+    &:active {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}

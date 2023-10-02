@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --accents-2: #333;
+    --accents-5: #888;
+    --geist-background: #000;
+    --ds-gray-alpha-400: hsla(0, 0%, 100%, 0.14);
+    --ds-gray-1000-value: 0, 0%, 93%;
+
+    --black: #000;
+    --white: #fff;
+    --gray: #a1a1a1;
+    --blue: rgb(32, 213, 236);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: var(--geist-background);
+    font-weight: 500;
+    width: 100%;
+    min-height: 1000px;
+    box-shadow: inset 0 -1px 0 0 var(--accents-2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: var(--white);
+}
+
+html {
+    font-size: 62.5%;
+    color: var(--black);
+    font-family: var(--font-family);
+    background-color: var(--white);
+    font-weight: 100;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+// Fonts emmBede
+
+body {
+    width: 100%;
+    overflow-y: auto;
+    .tippy-box {
+        border-radius: 8px;
+        font-size: 1.6rem;
+        background-color: rgba(84, 84, 84, 0.92);
+        padding: 8px;
+        color: var(--white);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 2px 4px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
+}
+
+// KHÔNG PHÙ HỢP CHO DỰ ÁN NỮA NÊN BỎ NHA!!!
+// scroll bar
+// html ::-webkit-scrollbar {
+//     border-radius: 0px;
+//     width: 8px;
+// }
+
+// html ::-webkit-scrollbar-thumb {
+//     border-radius: 4px;
+//     background-color: var(--gray);
+//     box-shadow: inset 0 0 6px rgba(110, 99, 99, 0.3);
+// }
+
+// html ::-webkit-scrollbar-track {
+//     border-radius: 0px;
+//     background-color: transparent;
+// }
