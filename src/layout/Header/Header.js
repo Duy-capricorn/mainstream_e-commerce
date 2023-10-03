@@ -9,6 +9,7 @@ import {
     faCircleQuestion,
     faKeyboard,
     faLanguage,
+    faCartShopping,
 } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
@@ -68,11 +69,13 @@ function Header() {
 
                 {!!isLogin ? (
                     <div className={cx('action')}>
+                        <Button primary href={'/login'}>
+                            <FontAwesomeIcon icon={faCartShopping} />
+                        </Button>
+
                         <Button className={cx('sing-up')} href={'/signup'} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                             Sign up
                         </Button>
-
-                        <Button primary>Log in</Button>
 
                         <Menu items={MENU_ITEMS}>
                             <button className={cx('menu-btn')}>
