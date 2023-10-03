@@ -1,0 +1,18 @@
+.menu-list {
+    padding-top: 9px;
+    width: 200px;
+
+    .menu-item {
+        color: var(--white);
+        width: 100%;
+        justify-content: left;
+        border: none;
+        background: transparent;
+        padding: 10px 8px 10px 16px;
+        margin-left: 0;
+
+        &:hover {
+            background: rgb(22, 24, 35);
+        }
+    }
+}

@@ -17,15 +17,15 @@
     border: 1.5px solid transparent;
     background-color: #1a1a1a;
     font-family: var(--font-sans-fallback);
-    color: var(--search-text-color);
     transition: border-color 0.2s ease-in-out;
     font-weight: 400;
-
+    
     input {
         flex: 1;
         padding-right: 35px;
         height: 100%;
         font-size: 1.6rem;
+        color: var(--grey);
         caret-color: var(--primary);
         background-color: transparent;
     }

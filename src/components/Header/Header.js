@@ -6,21 +6,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faPlus,
     faEllipsisVertical,
-    faEarthAmerica,
     faCircleQuestion,
     faKeyboard,
+    faLanguage,
 } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
 import Search from '@/components/Search';
 import Button from '@/components/Button';
-import Menu from '@/components/Popper/Menu'
+import Menu from '@/components/Popper/Menu';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: <FontAwesomeIcon icon={faEarthAmerica} />,
+        icon: <FontAwesomeIcon icon={faLanguage} />,
         title: 'Language',
         children: {
             title: 'Language',
@@ -68,13 +68,17 @@ function Header() {
 
                 {!!isLogin ? (
                     <div className={cx('action')}>
-                            <Button className={cx('sing-up')}  href={'/signup'} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-                                Sign up
-                            </Button>
+                        <Button className={cx('sing-up')} href={'/signup'} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                            Sign up
+                        </Button>
 
                         <Button primary>Log in</Button>
 
-                        <button className={cx("menu-btn")}><FontAwesomeIcon icon={faEllipsisVertical} /></button>
+                        <Menu items={MENU_ITEMS}>
+                            <button className={cx('menu-btn')}>
+                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                            </button>
+                        </Menu>
                     </div>
                 ) : null}
             </div>
