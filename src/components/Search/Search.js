@@ -38,7 +38,7 @@ function Search() {
         <div className={cx('wrapper')}>
             <Tippy
                 interactive={true}
-                visible={searchResult.length > 0}
+                // visible={searchResult.length > 0}
                 render={(attrs) => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>

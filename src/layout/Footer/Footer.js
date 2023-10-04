@@ -8,9 +8,7 @@ function Footer() {
         <div className={cx('wrapper')}>
             <footer>
                 <div className={cx('footer')}>
-                    <div className={cx('grid')}>
-                        <span>@Copyright belong to Tran Thai Duy - B2000104 - CTU</span>
-                    </div>
+                    <span>@Copyright belong to Tran Thai Duy - B2000104 - CTU</span>
                 </div>
             </footer>
         </div>

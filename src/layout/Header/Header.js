@@ -45,6 +45,37 @@ const MENU_ITEMS = [
     },
 ];
 
+const NAVBAR_ITEMS = [
+    {
+        tittle: 'Ecommerce',
+        to: '/',
+    },
+    {
+        tittle: 'Showcase',
+        to: '/showcase',
+    },
+    {
+        tittle: 'Docs',
+        to: '/docs',
+    },
+    {
+        tittle: 'Products',
+        to: '/product',
+    },
+    {
+        tittle: 'Analytics',
+        to: '/analytics',
+    },
+    {
+        tittle: 'Template',
+        to: '/template',
+    },
+    {
+        tittle: 'Enterprise',
+        to: '/enterprise',
+    },
+];
+
 function Header() {
     const [isLogin, setIsLogin] = useState(true);
 
@@ -54,14 +85,13 @@ function Header() {
                 <Link href={'/'} className={cx('logo')}>
                     Ecommerce
                 </Link>
-                <div className={cx('navbar-option')}>
-                    <Link href={'/'}>Showcase</Link>
-                    <Link href={'/'}>Docs</Link>
-                    <Link href={'/product'}>Product</Link>
-                    <Link href={'/'}>Analytics</Link>
-                    <Link href={'/'}>Template</Link>
-                    <Link href={'/'}>Enterprise</Link>
-                </div>
+                {NAVBAR_ITEMS.map((item, index) => (
+                    <div className={cx('navbar-option')}>
+                        <Link href={item.to} key={index}>
+                            {item.tittle}
+                        </Link>
+                    </div>
+                ))}
 
                 <div className={cx('search')}>
                     <Search />
