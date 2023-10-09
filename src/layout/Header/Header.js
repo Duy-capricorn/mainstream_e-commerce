@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,10 +47,6 @@ const MENU_ITEMS = [
 
 const NAVBAR_ITEMS = [
     {
-        tittle: 'Ecommerce',
-        to: '/',
-    },
-    {
         tittle: 'Showcase',
         to: '/showcase',
     },
@@ -78,6 +74,13 @@ const NAVBAR_ITEMS = [
 
 function Header() {
     const [isLogin, setIsLogin] = useState(true);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    // useEffect(() => {
+    //     const curPath = window.location.pathname.split('/')[1];
+    //     const activeItem = NAVBAR_ITEMS.findIndex((item) => item.section === curPath);
+    //     setActiveIndex(curPath.length === 0 ? 0 : activeItem);
+    // }, [location]);
 
     return (
         <div className={cx('wrapper')}>
@@ -86,11 +89,11 @@ function Header() {
                     Ecommerce
                 </Link>
                 {NAVBAR_ITEMS.map((item, index) => (
-                    <div className={cx('navbar-option')}>
-                        <Link href={item.to} key={index}>
-                            {item.tittle}
-                        </Link>
-                    </div>
+                    <Link href={item.to} key={index}>
+                        {/* <div className={cx(`navbar-option ${activeIndex === index ? 'active' : ''}`)}> */}
+                        <div className={cx('navbar-option')}>{item.tittle}</div>
+                        {/* </div> */}
+                    </Link>
                 ))}
 
                 <div className={cx('search')}>

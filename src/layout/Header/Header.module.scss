@@ -52,12 +52,16 @@
     cursor: pointer;
 
     a {
-        margin-left: -11px;
+        margin-left: 0px;
     }
 
-    :hover {
+    &:hover {
         color: var(--white);
         transition: color 0.3s ease;
+    }
+
+    .active {
+        color: var(--blue);
     }
 }
 
@@ -67,6 +71,7 @@
 }
 
 .menu-btn {
+    margin-left: 10px;
     font-size: 2rem;
     padding: 8px;
     font-weight: 400;

@@ -42,7 +42,7 @@ function Search() {
                 render={(attrs) => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PopperWrapper>
-                            <h4 className={cx('search-label')}>Relates</h4>
+                            <h4 className={cx('search-label')}>Relates...</h4>
                             <AccountItem />
                             <AccountItem />
                             <AccountItem />

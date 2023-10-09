@@ -1,5 +1,3 @@
-import Footer from '@/layout/Footer';
-
 export default function DashboardLayout({
     children, // will be a page or nested layout
 }) {

@@ -1,10 +1,5 @@
-.wrapper {
-    margin-left: 6px;
-}
-
 .Search,
 .search-result {
-    width: var(--search-popper-width);
     width: 300px;
 }
 
@@ -19,7 +14,7 @@
     font-family: var(--font-sans-fallback);
     transition: border-color 0.2s ease-in-out;
     font-weight: 400;
-    
+
     input {
         flex: 1;
         padding-right: 35px;
