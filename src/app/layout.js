@@ -1,5 +1,4 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { Fragment } from 'react';
 import './globals.scss';
 import { Inter } from 'next/font/google';
@@ -14,15 +13,11 @@ const inter = Inter({ subsets: ['latin'] });
 // };
 
 export default function RootLayout({ children }) {
-    const router = useRouter();
-
-    const showHeader = router.pathname === '/signup' ? false : true;
-
     return (
         <Fragment>
             <html lang="en">
                 <body className={inter.className}>
-                    {showHeader && <Header />}
+                    <Header />
                     <main>{children}</main>
                     <Footer />
                 </body>

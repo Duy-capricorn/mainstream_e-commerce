@@ -7,8 +7,12 @@ function Footer() {
     return (
         <div className={cx('wrapper')}>
             <footer>
-                <div className={cx('footer')}>
-                    <span>@Copyright belong to Tran Thai Duy - B2000104 - CTU</span>
+                <div className={cx('footer')}>{/* <Links /> */}</div>
+                <div className={cx('footer-bottom')}>
+                    &copy; {new Date().getFullYear()} Copyright:{' '}
+                    <div className={cx('info')}>
+                        <a href="https://github.com/Duy-capricorn">Tran Thai Duy</a>
+                    </div>
                 </div>
             </footer>
         </div>
